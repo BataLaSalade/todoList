@@ -173,7 +173,7 @@
 
 	View.prototype.bind = function (event, handler) {
 		var self = this;
-		/* var event = 'newTodo'
+		//var event = 'newTodo'
 		switch (event) {
 			case event: 'newTodo'
 				$on(self.$newTodo, 'change', function () {
@@ -214,8 +214,8 @@
 			case event: 'itemEditCancel'
 				self._bindItemEditCancel(handler);
 				break;
-		} */
-		if (event === 'newTodo') {
+		}
+		/* if (event === 'newTodo') {
 			$on(self.$newTodo, 'change', function () {
 				handler(self.$newTodo.value);
 			});
@@ -253,7 +253,7 @@
 
 		} else if (event === 'itemEditCancel') {
 			self._bindItemEditCancel(handler);
-		}
+		} */
 	};
 
 	// Export to window
