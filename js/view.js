@@ -136,9 +136,6 @@
 
 	View.prototype._itemId = function (element) {
 		var li = $parent(element, 'li');
-		console.log("li elem = ", element);
-		console.log("li dataset = ", li.dataset);
-		console.log("itemId = ", li.dataset.id);
 		return parseInt(li.dataset.id, 10);
 	};
 
@@ -176,6 +173,48 @@
 
 	View.prototype.bind = function (event, handler) {
 		var self = this;
+		/* var event = 'newTodo'
+		switch (event) {
+			case event: 'newTodo'
+				$on(self.$newTodo, 'change', function () {
+					handler(self.$newTodo.value);
+				});
+				break;
+			case event: 'removeCompleted'
+				$on(self.$clearCompleted, 'click', function () {
+					handler();
+				});
+				break;
+			case event: 'toggleAll'
+				$on(self.$toggleAll, 'click', function () {
+					handler({completed: this.checked});
+				});
+				break;
+			case event: 'itemEdit'
+				$delegate(self.$todoList, 'li label', 'dblclick', function () {
+					handler({id: self._itemId(this)});
+				});
+				break;
+			case event: 'itemRemove'
+				$delegate(self.$todoList, '.destroy', 'click', function () {
+					handler({id: self._itemId(this)});
+				});
+				break;
+			case event: 'itemToggle'
+				$delegate(self.$todoList, '.toggle', 'click', function () {
+					handler({
+						id: self._itemId(this),
+						completed: this.checked
+					});
+				});
+				break;
+			case event: 'itemEditDone'
+				self._bindItemEditDone(handler);
+				break;
+			case event: 'itemEditCancel'
+				self._bindItemEditCancel(handler);
+				break;
+		} */
 		if (event === 'newTodo') {
 			$on(self.$newTodo, 'change', function () {
 				handler(self.$newTodo.value);
