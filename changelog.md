@@ -1,3 +1,7 @@
+07/06/2019
+- Ajout des fichiers Jasmine dans node-modules afin de pouvoir lancer les TU
+- Refacto de la méthode View.prototype.bind : remplacement d'une succession de if / else if par un switch
+
 23/05/2019
 - Suppression des fichiers CSS dans le .gitignore
 - Ajout d'un changelog.md pour suivre les correctifs in-app
