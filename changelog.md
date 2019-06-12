@@ -1,3 +1,6 @@
+12/06/2019
+- Ajout d'une condition pour vérifier si l'ID du nouvel item est unique avant de le sauvegarder. Tant qu'il n'est pas unique, on en crée un nouveau. Store.prototype.save()
+
 07/06/2019
 - Ajout des fichiers Jasmine dans node-modules afin de pouvoir lancer les TU
 - Refacto de la méthode View.prototype.bind : remplacement d'une succession de if / else if par un switch
