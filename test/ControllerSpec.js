@@ -171,6 +171,16 @@ describe('controller', function () {
 		expect(view.render).toHaveBeenCalledWith('setFilter', "active");
 	});
 
+	it('should highlight "Completed" filter when switching to completed view', function () {
+		// TODO: write test
+		var todo = {id: 42, title: 'my todo', completed: true};
+		setUpModel([todo]);
+
+		subject.setView('#/completed');
+
+		expect(view.render).toHaveBeenCalledWith('setFilter', "completed");
+	});
+
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
