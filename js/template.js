@@ -58,10 +58,10 @@
 	 * });
 	 */
 	Template.prototype.show = function (data) {
-		var i, l;
+		var i;
 		var view = '';
 		console.log("template.js - show", data)
-		for (i = 0, l = data.length; i < l; i++) {
+		for (i = 0; i < data.length; i++) {
 			var template = this.defaultTemplate;
 			var completed = '';
 			var checked = '';
