@@ -59,7 +59,13 @@ describe('controller', function () {
 	});
 
 	it('should show entries on start-up', function () {
-		// TODO: write test
+		// TODO: au chargement de la page, on montre toujours toutes les todos sans filtrer
+		var todo = {title: 'my todo'};
+			setUpModel([todo]);
+
+			subject.setView('');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]); 
 	});
 
 	describe('routing', function () {
@@ -83,11 +89,23 @@ describe('controller', function () {
 		});
 
 		it('should show active entries', function () {
-			// TODO: write test
+			// TODO: active entries are entry with completed property = false
+			var todo = {id: 42, title: 'my todo', completed: false};
+			setUpModel([todo]);
+
+			subject.setView('#/active');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
 		it('should show completed entries', function () {
-			// TODO: write test
+			// TODO: completed entries are entry with completed property = true
+			var todo = {id: 42, title: 'my todo', completed: true};
+			setUpModel([todo]);
+
+			subject.setView('#/completed');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 	});
 
