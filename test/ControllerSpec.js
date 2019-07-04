@@ -61,11 +61,11 @@ describe('controller', function () {
 	it('should show entries on start-up', function () {
 		// TODO: au chargement de la page, on montre toujours toutes les todos sans filtrer
 		var todo = {title: 'my todo'};
-			setUpModel([todo]);
+		setUpModel([todo]);
 
-			subject.setView('');
+		subject.setView('');
 
-			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]); 
+		expect(view.render).toHaveBeenCalledWith('showEntries', [todo]); 
 	});
 
 	describe('routing', function () {
