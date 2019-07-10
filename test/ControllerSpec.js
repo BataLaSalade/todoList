@@ -196,6 +196,13 @@ describe('controller', function () {
 
 		it('should update the view', function () {
 			// TODO: write test
+			var todo = {id: 42, title: 'my todo', completed: true};
+			setUpModel([todo]);
+			subject.setView('');
+
+			view.trigger('toggleAll', {completed: true}); // update view from View.prototype.bind()
+
+			expect(view.render).toHaveBeenCalledWith('toggleAll', {checked: true});
 		});
 	});
 
