@@ -1,3 +1,6 @@
+04/07/2019
+- Remplacement des simples quotes par des doubles quotes dans le fichier de test
+
 02/07/2019
 - Dans la classe Template, supression d'une variable local pour stocker la taille du tableau ce qui alourdi le code
 - [TU] Test du chargement de la page, tous les todos doivent être afficher sans être filter. Pour cela, on paramètre la vue à afficher avec subject.setView("") sans paramètre et on test l'appel de la méthode View.prototype.render() avec la commande correspondant "showEntries" et la donnée à afficher
