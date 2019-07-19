@@ -197,13 +197,13 @@ describe("controller", function () {
 
 		it("should update the view", function () {
 			// TODO: write test
-			var todo = {id: 42, title: "my todo", completed: true};
+			var todo = {id: 42, title: "my todo", completed: false};
 			setUpModel([todo]);
 			subject.setView("");
 
-			view.trigger("toggleAll", {completed: true}); // update view from View.prototype.bind()
+			view.trigger("toggleAll", {completed: true});
 
-			expect(view.render).toHaveBeenCalledWith("toggleAll", {checked: true});
+			expect(view.render).toHaveBeenCalledWith("elementComplete", {id: 42, completed: true});
 		});
 	});
 
