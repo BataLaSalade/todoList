@@ -210,12 +210,12 @@ describe("controller", function () {
 	describe("new todo", function () {
 		it("should add a new todo to the model", function () {
 			// TODO: write test
-			//continue
 			setUpModel([]);
 
 			subject.setView("");
 
-			view.render.calls.reset();
+			view.trigger("newTodo", "my new todo");
+			expect(model.create).toHaveBeenCalledWith("my new todo", jasmine.any(Function));
 		});
 
 		it("should add a new todo to the view", function () {
