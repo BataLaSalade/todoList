@@ -3,10 +3,11 @@
 
 	/**
 	 * Takes a model and view and acts as the controller between them
-	 *
+	 * @memberof App
 	 * @constructor
 	 * @param {object} model The model instance
 	 * @param {object} view The view instance
+	 * 
 	 */
 	function Controller(model, view) {
 		var self = this;
@@ -91,6 +92,7 @@
 	/**
 	 * An event to fire whenever you want to add an item. Simply pass in the event
 	 * object and it'll handle the DOM insertion and saving of the new item.
+	 * @param {string} title The title of the task
 	 */
 	Controller.prototype.addItem = function (title) {
 		var self = this;
@@ -105,8 +107,9 @@
 		});
 	};
 
-	/*
+	/**
 	 * Triggers the item editing mode.
+	 * @param {number} id The ID of the item to edit from the DOM
 	 */
 	Controller.prototype.editItem = function (id) {
 		var self = this;
@@ -115,8 +118,10 @@
 		});
 	};
 
-	/*
-	 * Finishes the item editing mode successfully.
+	/**
+	 * Finishes the item editing mode successfully and save it.
+	 * @param {number} id The ID of the eddited item
+	 * @param {string} title The title of the eddited item
 	 */
 	Controller.prototype.editItemSave = function (id, title) {
 		var self = this;
@@ -138,8 +143,10 @@
 		}
 	};
 
-	/*
+	/**
 	 * Cancels the item editing mode.
+	 * @param  {number} id The ID of the item to remove from the DOM and
+	 * storage
 	 */
 	Controller.prototype.editItemCancel = function (id) {
 		var self = this;
@@ -161,7 +168,7 @@
 		self.model.read(function(data) {
 			items = data;
 		});
-
+//TODO : a supprimer
 		items.forEach(function(item) {
 			if (item.id === id) {
 				console.log("Element with ID: " + id + " has been removed.");
@@ -215,6 +222,7 @@
 	/**
 	 * Will toggle ALL checkboxes' on/off state and completeness of models.
 	 * Just pass in the event object.
+	 * @param {boolean} completed State of the task : completed (true) or not (false)
 	 */
 	Controller.prototype.toggleAll = function (completed) {
 		var self = this;
