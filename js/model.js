@@ -3,7 +3,7 @@
 
 	/**
 	 * Creates a new Model instance and hooks up the storage.
-	 *
+	 * @memberof App
 	 * @constructor
 	 * @param {object} storage A reference to the client side storage class
 	 */
@@ -92,6 +92,8 @@
 
 	/**
 	 * Returns a count of all todos
+	 * 
+	 * @param {function} callback The callback to fire when the number of item changes
 	 */
 	Model.prototype.getCount = function (callback) {
 		var todos = {
