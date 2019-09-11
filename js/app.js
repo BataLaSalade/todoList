@@ -1,10 +1,14 @@
 /*global app, $on */
-(function () {
+/**
+ * Global application
+ * @class
+ */
+var App = (function () {
 	'use strict';
 
 	/**
 	 * Sets up a brand new Todo list.
-	 *
+	 * @memberof App
 	 * @param {string} name The name of your new to do list.
 	 */
 	function Todo(name) {
