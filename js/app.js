@@ -9,7 +9,7 @@ var App = (function () {
 	/**
 	 * Sets up a brand new Todo list.
 	 * @memberof App
-	 * @param {string} name The name of your new to do list.
+	 * @param {String} name The name of your new to do list.
 	 */
 	function Todo(name) {
 		this.storage = new app.Store(name);
