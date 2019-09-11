@@ -19,8 +19,17 @@ var App = (function () {
 		this.controller = new app.Controller(this.model, this.view);
 	}
 
+	/**
+	 * A new Todo list
+	 * @name App#todo
+	 */
 	var todo = new Todo('todos-vanillajs');
 
+	/**
+	 * Set the view to load from navigator
+	 * @memberof App
+	 * @function
+	 */
 	function setView() {
 		todo.controller.setView(document.location.hash);
 	}
