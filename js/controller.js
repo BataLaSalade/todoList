@@ -275,6 +275,7 @@
 
 	/**
 	 * Simply updates the filter nav's selected states
+	 * @param {string} currentPage The active route " " | "active" | "completed"
 	 */
 	Controller.prototype._updateFilterState = function (currentPage) {
 		// Store a reference to the active route, allowing us to re-filter todo
