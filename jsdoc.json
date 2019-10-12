@@ -12,7 +12,8 @@
         "readme": "./readme.md",
         "destination": "docs/",
         "recurse": true,
-        "verbose": true
+        "verbose": true,
+        "tutorials": "./tutorials"
     },
     "templates": {
         "default": {
