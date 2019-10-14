@@ -91,7 +91,7 @@ describe("controller", function () {
 		it("should show active entries", function () {
 			// TODO: active entries are entry with completed property = false
 			var todo = {id: 42, title: "my todo", completed: false};
-			setUpModel([todo]); // test d'ajouter 3 todos dont une qui est true ca devrait faire peter le test si tu passe que une entry
+			setUpModel([todo]);
 
 			subject.setView("#/active");
 
